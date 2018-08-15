@@ -13,7 +13,12 @@
   <link rel="manifest" href="./manifest.json">
 </head>
 <body>
-  <input type="file" accept="image/*">
+  <h1>Testing file upload in Home Screen App</h1>
+  <form method="post" action="/" enctype="multipart/form-data">
+    <input type="text" name="thetext">
+    <input type="file" name="thefile">
+    <button>Submit</button>
+  </form>
 
   <script>
     if ('serviceWorker' in navigator) {
