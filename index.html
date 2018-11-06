@@ -14,9 +14,20 @@
 </head>
 <body>
   
-  <input type="file" accept="image/*">
+  <p>Line</p>
 
   <script>
+    var line = [
+              "https://buy.line.me/?mgm=1111&umid=107899638&utm_source=mgm&utm_campaign=1111&sign=9d67f3b50fb39362e9b2465ca8fb909712820c712ff4e752f28ee2c4192e6ec9&utm_medium=LINE",
+              "https://buy.line.me/R/?mgm=1111&umid=101993899&utm_source=mgm&utm_campaign=1111&sign=07de80620c8362347b81b785d84a80ab3bbdf7b060a20c94caecd2bbc35da842&utm_medium=LINE"
+    ];
+    
+    line.forEach(function(e){
+      setTimeout(function(){ 
+        window.open(e, '_blank');
+      }, 3000);
+    })
+    
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./service-worker.js')
       .then(function(registration) {
